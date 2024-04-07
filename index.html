@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            height: 100vh;
+            background: url('https://www.w3schools.com/w3images/architect.jpg');
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .header {
+            height: 10vh;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0px;
+        }
+        
+        .right ul {
+            display: flex;
+        }
+        
+        .right li {
+            margin: 10px;
+            list-style: none;
+        }
+        
+        .right ul li:nth-child(1) {
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 10px;
+        }
+        
+        .right ul li:nth-child(2) {
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 10px;
+        }
+        
+        .right ul li:nth-child(3) {
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 10px;
+        }
+        
+        .right {
+            margin-right: 20px;
+            letter-spacing: 5px;
+        }
+        
+        .left ul {
+            display: flex;
+            justify-content: end;
+            letter-spacing: 5px;
+        }
+        
+        .left ul li {
+            list-style: none;
+            font-size: 20px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .left ul li:nth-child(1) {
+            margin-left: 20px;
+            padding: 10px;
+            font-weight: bolder;
+        }
+        
+        .left ul li:nth-child(2) {
+            padding: 10px;
+        }
+        
+        .imagetext b {
+            font-size: 30px;
+            color: white;
+        }
+        
+        b {
+            border: 2px solid white;
+            padding: 8px 16px 15px 15px;
+            width: 70px;
+            background-color: #000000;
+            opacity: 0.7;
+            text-align: center;
+            top: 18px;
+            right: 100px;
+        }
+        
+        span {
+            font-size: 35px;
+            letter-spacing: 5px;
+            color: #ffffff;
+            font-family: sans-serif;
+        }
+        
+        p {
+            font-size: 25px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            border-bottom: 2px solid #eee;
+            height: 10vh;
+            padding-top: 20px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+        }
+        
+        .manypic {
+            min-height: 80vh;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .pic {
+            height: 280px;
+            width: 330px;
+            margin: 5px;
+        }
+        
+        #pic1 {
+            background: url('https://www.w3schools.com/w3images/house5.jpg');
+        }
+        
+        #pic2 {
+            background: url('https://www.w3schools.com/w3images/house2.jpg');
+        }
+        
+        #pic3 {
+            background: url('https://www.w3schools.com/w3images/house3.jpg');
+        }
+        
+        #pic4 {
+            background: url('https://www.w3schools.com/w3images/house4.jpg');
+        }
+        
+        #pic5 {
+            background: url('https://www.w3schools.com/w3images/house2.jpg');
+        }
+        
+        #pic6 {
+            background: url('https://www.w3schools.com/w3images/house5.jpg');
+        }
+        
+        #pic7 {
+            background: url('https://www.w3schools.com/w3images/house4.jpg');
+        }
+        
+        #pic8 {
+            background: url('https://www.w3schools.com/w3images/house3.jpg');
+        }
+        
+        h4 {
+            font-size: 15px;
+            padding-left: 10px;
+            padding-top: 10px;
+            height: 40px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            width: 46%;
+        }
+        
+        h5 {
+            font-size: 25px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            border-bottom: 2px solid #eee;
+            height: 10%;
+            padding-top: 30px;
+            padding-bottom: 15px;
+            padding-left: 25px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .lorem {
+            text-align: justify;
+            margin-left: 20px;
+        }
+        
+        .M-container {
+            width: 104%;
+            padding: 20px;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .box {
+            min-height: 250px;
+            width: 350px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        
+        #box1 img {
+            width: 100%;
+            height: 240px;
+        }
+        
+        #box2 img {
+            width: 100%;
+            height: 240px;
+        }
+        
+        #box3 img {
+            width: 100%;
+            height: 240px;
+        }
+        
+        #box4 img {
+            width: 100%;
+            height: 240px;
+        }
+        
+        .JohnDoe {
+            height: 50px;
+            font-size: 24px;
+            font-family: sans-serif;
+            padding: 10px 0px;
+        }
+        
+        .founder {
+            height: 50px;
+            font-size: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #838383;
+        }
+        
+        .ceo {
+            height: 50px;
+            font-size: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #838383;
+        }
+        
+        .para {
+            height: 50px;
+            font-family: sans-serif;
+            color: #000000;
+            line-height: 1.5x;
+        }
+        
+        button {
+            height: 40px;
+            width: 100%;
+            font-size: 15px;
+            padding: 8px 16px;
+            background-color: #f1f1f1;
+            border: none;
+            margin-top: 10px;
+        }
+        
+        h3 {
+            font-size: 25px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            border-bottom: 2px solid #eee;
+            height: 10%;
+            padding-top: 30px;
+            padding-bottom: 15px;
+            padding-left: 38px;
+            font-family: Arial, sans-serif;
+        }
+        
+        sup {
+            font-size: 15px;
+            margin: 37px;
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            padding-bottom: 5px;
+        }
+        
+        .form {
+            width: 95%;
+            margin: auto;
+        }
+        
+        input {
+            width: 100%;
+            height: 37px;
+            padding: 10px;
+            font-size: 18px;
+            font-family: sans-serif;
+            border: none;
+            border: 2px solid #dbd9d9;
+        }
+        
+        .submit {
+            width: 100%;
+            margin-top: 5%;
+            margin-bottom: 50px;
+        }
+        
+        button2 {
+            padding: 10px 16px;
+            font-size: 15px;
+            background-color: #000000;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-family: sans-serif;
+        }
+        
+        .botmimage {
+            max-width: 95%;
+            margin: auto;
+            /* border: 2px solid black; */
+        }
+        
+        .botmimage img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .footer {
+            height: 50%;
+            border: 2px solid black;
+            background-color: rgb(12, 12, 12);
+            padding: 30px;
+            margin-top: 5px;
+            color: #ffffff;
+        }
+        
+        .footer ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        
+        .footer ul li {
+            font-size: 15px;
+            font-family: vardana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="imagetext"><b>BR</b>
+            <span>Architects</span></div>
+        <div class="header">
+            <div class="left">
+                <ul>
+                    <li>BR</li>
+                    <li>Architects</li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>Projects</li>
+                    <li>About</li>
+                    <li>Contact</li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <p>Projects</p>
+    <div class="manypic">
+        <div class="pic" id="pic1">
+            <h4>summer house</h4>
+        </div>
+        <div class="pic" id="pic2">
+            <h4>Brick House</h4>
+        </div>
+        <div class="pic" id="pic3">
+            <h4>Renovated</h4>
+        </div>
+        <div class="pic" id="pic4">
+            <h4>Barn House</h4>
+        </div>
+        <div class="pic" id="pic5">
+            <h4>Summer House</h4>
+        </div>
+        <div class="pic" id="pic6">
+            <h4>Brick House</h4>
+        </div>
+        <div class="pic" id="pic7">
+            <h4>Renovated</h4>
+        </div>
+        <div class="pic" id="pic8">
+            <h4>Barn House</h4>
+        </div>
+    </div>
+    <h5>About</h5>
+    <div class="lorem">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aspernatur et ullam, quam ducimus nostrum! Reprehenderit, quasi natus. Odit tenetur culpa numquam expedita ex maiores totam quia. Accusantium illo earum necessitatibus nobis libero velit assumenda
+        ab vitae qui. Consequuntur voluptatum error, alias minima id rerum sapiente deserunt. Quos distinctio atque ipsa quae necessitatibus voluptatem vel obcaecati laudantium quia eius fugit tempore, dolorem aut consectetur, perferendis deleniti doloremque
+        quam, velit natus? Sapiente recusandae, pariatur sit, nisi sequi minima qui, magnam cum modi esse voluptates maiores laboriosam labore iste iure explicabo ab nam exercitationem ex maxime odio laudantium dolorum est similique! Aut?
+    </div>
+    <div class="M-container">
+        <div class="box" id="box1">
+            <div class="image">
+                <img src="https://www.w3schools.com/w3images/team2.jpg" alt=""></div>
+            <div class="JohnDoe">John Doe</div>
+            <div class="ceo">CEO & Founder</div>
+            <div class="para">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+            <button>contact</button>
+        </div>
+        <div class="box" id="box2">
+            <div class="image">
+                <img src="https://www.w3schools.com/w3images/team1.jpg" alt=""></div>
+            <div class="JohnDoe">Jane Doe</div>
+            <div class="ceo">Architect</div>
+            <div class="para">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+            <button>contact</button>
+        </div>
+        <div class="box" id="box3">
+            <div class="image">
+                <img src="https://www.w3schools.com/w3images/team3.jpg" alt=""></div>
+            <div class="JohnDoe">Mike Ross</div>
+            <div class="ceo">Architetr</div>
+            <div class="para">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+            <button>contact</button>
+        </div>
+        <div class="box" id="box4">
+            <div class="image">
+                <img src="https://www.w3schools.com/w3images/team4.jpg" alt=""></div>
+            <div class="JohnDoe">Dan Star</div>
+            <div class="ceo">Architetr</div>
+            <div class="para">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+            <button>contact</button>
+        </div>
+    </div>
+    <h3>contact</h3>
+    <sup>Lets get in touch and talk about your next project.</sup>
+    <div class="form">
+        <form action="">
+            <input type="text" placeholder="Name"><br><br>
+            <input type="text" placeholder="Subject"><br><br>
+            <input type="text" placeholder="Email"><br><br>
+            <input type="text" placeholder="Comment">
+            <div class="submit">
+                <button2>send message</button2>
+            </div>
+        </form>
+    </div>
+    <div class="botmimage">
+        <img src="https://www.w3schools.com/w3images/map.jpg" alt="">
+    </div>
+    <div class="footer">
+        <ul>
+            <li>Powered by</li>
+            <li>
+                <div class="w3css"> w3.css</div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
